@@ -3,50 +3,12 @@ package org.example;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-// Klasse Workout
-class Workout {
-    private String name;
-    private int dauerMinuten;
-    private double kalorien;
-    private boolean istKrafttraining;
-
-    // Konstruktor
-    public Workout(String name, int dauerMinuten, double kalorien, boolean istKrafttraining) {
-        this.name = name;
-        this.dauerMinuten = dauerMinuten;
-        this.kalorien = kalorien;
-        this.istKrafttraining = istKrafttraining;
-    }
-
-    // Getter-Methoden
-    public String getName() {
-        return name;
-    }
-
-    public int getDauerMinuten() {
-        return dauerMinuten;
-    }
-
-    public double getKalorien() {
-        return kalorien;
-    }
-
-    public boolean isIstKrafttraining() {
-        return istKrafttraining;
-    }
-
-    // Methode: prüft ob Workout intensiv ist (mehr als 400 Kalorien)
-    public boolean istIntensiv() {
-        return kalorien > 250;
-    }
-}
-
-// Hauptklasse mit GUI
 public class FitnessTracker extends JFrame {
     private ArrayList<Workout> workouts;
     private DefaultTableModel tableModel;
