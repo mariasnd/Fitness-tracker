@@ -98,7 +98,7 @@ public class FitnessTracker extends JFrame {
 
         // Button: Workout hinzufügen
         JButton hinzufuegenButton = new JButton("Workout hinzufügen");
-        hinzufuegenButton.setBounds(250, 320, 150, 30);
+        hinzufuegenButton.setBounds(250, 320, 180, 30);
         panel.add(hinzufuegenButton);
 
         hinzufuegenButton.addActionListener(new ActionListener() {
@@ -202,7 +202,7 @@ public class FitnessTracker extends JFrame {
 
         try {
             int dauer = Integer.parseInt(dauerField.getText());
-            double kalorien = Double.parseDouble(kalorienField.getText());
+            int kalorien = Integer.parseInt(kalorienField.getText());
             boolean istKraft = krafttrainingBox.isSelected();
 
             Workout neuesWorkout = new Workout(name, dauer, kalorien, istKraft);
@@ -217,7 +217,7 @@ public class FitnessTracker extends JFrame {
             krafttrainingBox.setSelected(false);
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Nur Eingabe von Zahlen in den Feldern Kalorien und Dauer erlaubt!");
+            JOptionPane.showMessageDialog(this, "Nur Eingabe von ganzen Zahlen in den Feldern Kalorien und Dauer erlaubt!");
         }
     }
 
