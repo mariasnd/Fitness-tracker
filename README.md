@@ -4,14 +4,6 @@ Verwaltung von Workouts -> folgende Informationen in GUI gespeichert werden: Nam
 GUI bietet auch: Anzeige aller Workouts in einer Tabelle, Filterfunktion für Krafttraining, Sorteriung nach Dauer oder Kalorien, Kennzeichnung intensiver Workouts (Kalorien > 250), Berechnung durchschnittlicher Kalorienverbrauch
 ----
 Projektstruktur:
-
-
-src/
-└── org.example/
-    ├── FitnessTracker.java   // Hauptprogramm + GUI + Logik
-    ├── Workout.java          // Modellklasse für Workouts
-    └── WorkoutTest.java      // JUnit-Tests für die Modellklasse
-    
 Workout.java: repäsentiert einzelnes Workout & enthält: 
 - Attribute: Name, Dauer, Kalorien, Krafttraining
 - Getter/Setter
